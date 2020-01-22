@@ -1,2 +1,2 @@
 # -mern-project
-Projeto desenvolvido com Express, node.js,  mongoDb e react
+Projeto desenvolvido com Express, Node.js,  MongoDb, React e TypeScript;
