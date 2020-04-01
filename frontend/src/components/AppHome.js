@@ -1,29 +1,12 @@
-import React, { useCallback, useState } from 'react'
-import styled from 'styled-components'
-import { AppContainer } from './AppContainer'
-import AppImage from './AppImage'
-import { AppLoading } from './AppLoading'
+import React from 'react'
 
-const Button = styled.button`
-    font-size: 25px
-`
 
 export const AppHome = () => {
-    const [showImage, setShowImage] = useState(true)
+ 
 
-    const toggle = useCallback(() => {
-        setShowImage(!showImage)
-    }, [setShowImage, showImage])
+    return  (
 
-    return <AppContainer>
-        <h3>App Home</h3>
-
-        <Button onClick={toggle}>
-            {showImage ? 'Hide' : 'Show'}
-        </Button>
-
-        <AppImage show={showImage}/>
-
-        <AppLoading/>
-    </AppContainer>
+        <h1> Home</h1>
+    )
+    
 }

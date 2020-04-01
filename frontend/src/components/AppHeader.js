@@ -14,7 +14,7 @@ const Div = styled.div`
 
 export const AppHeader = () => {
     return <Div>
-        <Link to={'/aula'}>
+        <Link to={'/'}>
             Home
         </Link>
         <Link to={'/form'}>
@@ -23,8 +23,8 @@ export const AppHeader = () => {
         <Link to={'/list'}>
             List
         </Link>
-        <Link to={'/'}>
-            Resolução da avaliação (Usuários)
+        <Link to={'/user'}>
+            List (Usuários)
         </Link>
     </Div>
 }

@@ -4,17 +4,7 @@ import './App.css'
 import { AppRoutes } from './routes/AppRoutes'
 
 export default () => {
-    //componentWillMount
-    useEffect(() => {
-        //Codigo
-        console.log('componente montado')
-        return () => {
-            //componentWillUnmount
-            console.log('componente desmontado')
-        }
-    }, [])
-    //ComponentWillUpdate
-
+   
     return (
         <BrowserRouter>
             <AppRoutes/>

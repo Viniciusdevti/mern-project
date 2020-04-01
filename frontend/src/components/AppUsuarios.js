@@ -21,8 +21,8 @@ export const AppUsuarios = () => {
                         Usuários
                     </Typography>
                     <Spacer/>
-                    <Button color='inherit' href='/aula'>
-                        Exemplos do professor
+                    <Button color='inherit' href='/'>
+                       Home 
                     </Button>
                 </Toolbar>
             </AppBar>

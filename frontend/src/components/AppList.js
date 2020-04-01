@@ -1,54 +1,32 @@
-import {
-  Box,
-  Button,
-  CardContent,
-  CircularProgress,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TablePagination
-} from "@material-ui/core";
+
 import React, { useEffect, useState } from "react";
-import { listUsers } from "../service/UserService";
+
+import api from  "../service/api";
 
 export const AppList = () => {
   const [users, setUsers] = useState([]);
-  const [err, setErr] = useState("");
 
   useEffect(() => {
-    listUsers("/users")
-      .then(({ data }) => {
-        setUsers(data);
-      })
-      .catch(e => {
-        setErr(e.message);
-      });
-  }, []);
+    api.get("usuarios").then(response => {
+      setUsers(response.user);
+      
+    });
+  }, );
+
 
   return (
     <div>
-      {err}
-      <table>
-        <tr>
-          <th>
-            <h3>Usuarios</h3>
-            {users.map(user => (
-              <div>{user.username}</div>
-            ))}
-          </th>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>
+            <strong>Caso:</strong>
+            <p>{user.email}</p>
 
-          <th>
-            <h3>Email</h3>
-            {users.map(user => (
-              <div>{user.email}</div>
-            ))}
-          </th>
-        </tr>
-      </table>
+         
+        </li>
+      ))}
+    </ul>
+
     </div>
   );
 };
