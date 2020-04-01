@@ -3,11 +3,11 @@ const express = require ('express');
 
 const User = require ('../model/user');
 
-var cors = require('cors')
+
 
 
 const router = express.Router(); 
-router.use(cors());
+
 router.post('/cadastro', async (req, res) => {
 
 try
